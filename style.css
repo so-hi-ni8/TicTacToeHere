@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Lato:ital,wght@1,300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+nav{
+    background-image: linear-gradient( 134.6deg,  rgba(201,37,107,1) 15.4%, rgba(116,16,124,1) 74.7% );
+    color: aliceblue;
+    height: 60px;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+.gamecontainer{
+    /* background-color: burlywood; */
+    display: flex;
+    justify-content: center;
+    margin-top: 49px;
+    margin-left: 40px;
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+.box{
+    border: 2px solid black;
+    font-size: 6.9vw;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(244, 232, 243);
+}
+.gameinfo{
+    margin: 30px;
+    margin-left: 70px;
+    padding: 0 30px;
+    font-family: 'EB Garamond', serif;
+}
+.imgbox img{
+    width: 0;
+    transition: width 0.5s ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.info{
+    font-weight:300;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#reset{
+    margin: 24px;
+    padding: 6px;
+    background-color: rgb(212, 136, 212);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.gameinfo h1{
+    margin-bottom: 12px;
+}
+.line{
+    background-color: #4f074f;
+    position: absolute;
+    width: 0;
+    height: 1.7px;
+    transition: width 0.3s ease-in-out;
+}
+@media only screen and (max-width: 800px) {
+    .gamecontainer {
+      flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 75px;
+        /* margin-right: 109px; */
+    }
+    .gameinfo h1{
+        font-size: 2rem;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3, 17vw);
+        grid-template-columns: repeat(3, 18vw);
+    }
+}
